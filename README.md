@@ -7,7 +7,7 @@ This repository contains R scripts that were used to generate results and plots 
   
   **_readPACs.R_**: This script is used to  reads the outputs from APA analysis methods and stores them as a *PACdataset* object from [movAPA](https://github.com/BMILAB/movAPA/) for filtering, statistics, and other operations.
   
-  **_sata_pa.R_**: This script is used to integrate *PACdataset* objects from different methods for the same sample and store them as a list for subsequent unified data loading and calculation. Meanwhile, it preprocesses the reference pA dataset.
+  **_sata_pa.R_**: This script is used to integrate *PACdataset* objects from different methods for the same sample data and store them as a list for subsequent unified data loading and calculation. Meanwhile, it preprocesses the reference pA dataset.
   
   
 **2. Benchmark/**: This directory contains scripts to evaluate the performance of the ten APA analysis methods under various aspects.
