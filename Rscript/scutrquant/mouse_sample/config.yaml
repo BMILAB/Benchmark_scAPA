@@ -1,0 +1,16 @@
+dataset_name: "mouse_sperm"
+sample_file: "sample/sample_sheet.csv"
+sample_regex: ".*"
+#cell_annots: null
+#cell_annots_key: "cell_id"
+#exclude_unannotated_cells: False
+target: "utrome_mm10_v2"
+targets_config: "extdata/targets/targets.yaml"
+
+bx_whitelist: "/mnt/user/BXY/scAPA/SRA/mouse_sperm/merge/whitelist.txt"
+tech: "10xv2"
+strand: "--fr-stranded"
+#tmp_dir: "/tmp"
+
+min_umis: 500
+output_format: "sce"

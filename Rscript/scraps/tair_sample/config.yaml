@@ -1,0 +1,56 @@
+# config for scraps snakemake pipeline 
+DATA: 
+# Data folder containing FASTQs
+#If the input is a BAM file, a folder named after the sample should be created in the result folder, where the aligned BAM file will be stored.
+  "sim_data_bam"
+
+# results directory
+RESULTS:
+  "sim_data_res"
+
+# path to STAR executable, if not in PATH
+STAR:
+  "STAR"
+
+# path to STAR genome index
+STAR_INDEX:
+  "index/star_tair10.index"
+  
+# path to Chromium V3 whitelist
+WHITELIST_V3:
+#  "whitelist/3M-february-2018.txt"
+
+# path to Chromium V2 whitelist
+WHITELIST_V2:
+  "whitelist/whitelist.txt"
+
+POLYA_SITES:
+# polya_db 3 on GRCh38 with 5 bases upstream and 3 bases
+# downstream slop relative to annotated cleavage site
+  "ref/scraps_tair10.saf.gz"
+   
+#POLYA_FORMAT:
+# SAF or GTF, currently auto detecting filename .saf or .saf.gz, case-insensitive
+#   "SAF"
+
+# TSV relating all sequenced libraries to sane capture names and other metadata
+FASTQS:
+  "sample_fastqs.tsv"
+
+PAIRED_SAMPLES:
+# Sample basenames
+
+R1_SAMPLES:
+# Sample basenames
+
+R2_SAMPLES:
+  - pas1_gn1000_bn1400_rep1
+
+# for multiqc report
+report_section_order:
+  cutadapt:
+    order: 1000
+  star:
+    order: 100
+  featureCounts:
+    order: -1000
