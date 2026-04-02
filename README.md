@@ -1,7 +1,13 @@
 # Benchmarking computational methods for identifying and quantifying polyadenylation sites from single-cell RNA-seq data
 This repository contains R scripts that were used to generate results and plots for the paper titled "**Benchmarking computational methods for identifying and quantifying polyadenylation sites from single-cell RNA-seq data**".  
 
-**1. DataProcessing/**: This directory contains scripts for data pre-processing of the benchmark study.
+**1. Data/**: This directory contains the reference pA datasets.
+
+
+**2. Rscript/**: This directory contains code for running the APA analysis tools.
+
+
+**3. DataProcessing/**: This directory contains scripts for data pre-processing of the benchmark study.
   
   **_functions.R_**: Common functions called by other scripts.
   
@@ -10,7 +16,7 @@ This repository contains R scripts that were used to generate results and plots 
   **_sata_pa.R_**: This script is used to integrate *PACdataset* objects from different methods for the same sample data and store them as a list for subsequent unified data loading and calculation. Meanwhile, it preprocesses the reference pA dataset.
   
   
-**2. Benchmark/**: This directory contains scripts to evaluate the performance of the ten APA analysis methods under various aspects.
+**4. Benchmark/**: This directory contains scripts to evaluate the performance of the ten APA analysis methods under various aspects.
 
   **_identification_benchmark.R_**: This script is used to compare the pAs identified by different methods and generate the corresponding figures for the manuscript.
   
